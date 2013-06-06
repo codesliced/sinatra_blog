@@ -5,7 +5,13 @@
       <div class="author"><%=post.author%></div>
       <div class="title"><%=post.title%></div>
       <div class="post"><%=post.content%></div>
-      <div class="date"><%=post.created_at%></div>
+      <div class="tags">
+        <% post.tags.each do |tag| %>
+          <a href="#"><span class="tag"><%= tag.tag_name %></span></a>
+        <% end %>
+      </div>
+      <div class="date"><%= post.created_at %></div>
+
       <!-- <tr><td><p>&nbsp;</p></td></tr> -->
         <%end%>
   </div>

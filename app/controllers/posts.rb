@@ -20,3 +20,5 @@ post '/create_post' do
   @post = Post.create(params[:post])
   erb :post
 end
+
+
