@@ -4,6 +4,11 @@ photo
 hiking
 video
 life
+movies
+travel
+california
+chicago
+italy
 TAGS
 
 authors = <<-AUTHORS
@@ -46,15 +51,15 @@ content_seed = content.each_line.to_a
 
 tag_seed.each do |t|
   Tag.create(
-    tag_name: tag_seed.sample
+    tag_name: tag_seed.sample.strip
     )
 end
 
-5.times do
+8.times do
   post = Post.create(
-    title: title_seed.sample,
-    author: author_seed.sample,
-    content: content_seed.sample
+    title: title_seed.sample.strip,
+    author: author_seed.sample.strip,
+    content: content_seed.sample.strip
     )
   # post.tags << tag #Tag.all.sample(3)  #add one tag to a post
   post.tags << Tag.all.sample(2)       #add three random tags to each post
