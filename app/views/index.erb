@@ -11,7 +11,7 @@
           <a href="#"><span class="tag"><%= tag.tag_name %></span></a>
         <% end %>
       </div></span>
-      <div class="date"><%= post.created_at %></div>
+      <div class="date"><%= post.created_at.strftime("%b %d, %Y") %></div>
 
       <!-- <tr><td><p>&nbsp;</p></td></tr> -->
         <%end%>
