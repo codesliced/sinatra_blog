@@ -1,24 +1,23 @@
 get '/posts' do
-  @posts = Post.all
   erb :list_of_posts
 end
 
-
 post '/all' do
-
-  # p params.inspect
-  Post.create(
-    title: params[:post][:title],
-    content: params[:post][:content],
-    author: params[:post][:author])
+  @post = Post.create(params[:post])
   @posts = Post.all  
   redirect '/'
 end
 
-
-post '/create_post' do
-  @post = Post.create(params[:post])
+get '/single/:id' do
+  @post = Post.find(params[:id])
   erb :post
+end
+
+
+post '/destroy/:id' do
+  @post = Post.find(params[:id])
+  @post.destroy
+  redirect '/'
 end
 
 
