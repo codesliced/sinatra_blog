@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="blogposts">
-    <div class="headline"><a href="#">All Posts</a> | <a href="/posts">Create</a></div>
+   <div class="headline"><a href="#">All Posts</a> | <a href="/posts">Create</a></div>
+   <div class="blogposts">
     <% @posts.each do |post| %>
 
       <div class="title"><a href="/single/<%= post.id %>"><%=post.title%></a></div>
