@@ -256,10 +256,10 @@ footer {
   display: block;
 }
 
-
+/*
 input[type=button]:hover {
   background-color: #53777A;
-}
+}*/
 
 .single_post_created {
   float:right;
@@ -279,7 +279,11 @@ input[type=button]:hover {
   margin-top: 15px;
 }
 
-
+.blog_form {
+  color: #53777A;
+  font-style: oblique;
+  font-size: 11px;
+}
 
 /*
 Scheme 1

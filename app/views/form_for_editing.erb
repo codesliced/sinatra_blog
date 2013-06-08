@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="create_posts">
+  <form action="/edit/<%=@post.id%>", method="POST">
+    <div class="author_input"><label>Author:</label> <input class="blog_form" type="text" name="post[author]" autofocus placeholder="username" value="<%=@post.author%>" autofocus></div>
+    <div class="title_input"><label>Title:</label> <input class="blog_form" type="text" name="post[title]" placeholder="title" value="<%=@post.title%>" ></div>
+    <div class="content_input"><label>Content:</label> <textarea rows="10" name="post[content]" placeholder="blog content"  class="blog_form"> <%=@post.content%> </textarea></div>
+    <div class="tag_input"><label>Tags:</label><input type="text" name="post[tags]" placeholder="separate with commas"  <% tag_array=[] %>
+    <% @post.tags.each do |tag| %>
+    <% tag_array << tag.tag_name %>
+    <% end %>
+    value = "<%= tag_array.join(", ") %>" class="blog_form"> 
+     </div>
+    <div class="submit_btn"><input class="post_btn" type="submit" value="Post"></div>
+  </form>
+</div>
+<footer><p>Copyright 2013</p></footer>
+</div>
+
+
+
+ 

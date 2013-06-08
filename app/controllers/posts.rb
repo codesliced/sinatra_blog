@@ -4,7 +4,7 @@ end
 
 post '/all' do
   @post = Post.create(params[:post])
-  @posts = Post.all  
+  @posts = Post.all
   redirect '/'
 end
 
@@ -21,7 +21,16 @@ post '/destroy/:id' do
 end
 
 
+get '/edit/:id' do
+  @post = Post.find(params[:id])
+
+  erb :form_for_editing
+  
+end
+
 post '/edit/:id' do
   @post = Post.find(params[:id])
   @post.update_attributes(params[:post])
+
+  redirect "/single/#{@post.id}"
 end

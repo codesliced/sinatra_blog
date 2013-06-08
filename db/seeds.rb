@@ -9,6 +9,15 @@ travel
 california
 chicago
 italy
+animals
+architecture
+art
+asia
+australia
+autumn
+baby
+band
+barcelona
 TAGS
 
 authors = <<-AUTHORS
@@ -22,6 +31,11 @@ lungegrammer
 reelpeet
 lec101
 michiesharine
+jeaninesw
+snora88
+claudinerlco
+fakepeet
+dankhole
 AUTHORS
 
 content = <<-CONTENT
@@ -30,6 +44,7 @@ Actually pop-up Carles hoodie letterpress 90's DIY, Pinterest tattooed. Single-o
 Sriracha keytar bespoke McSweeney's, twee flannel +1. Organic meggings four loko vinyl swag. Gastropub flexitarian selvage, Schlitz before they sold out messenger bag Tonx selfies. Chambray shoreditch you probably haven't heard of them ugh. Letterpress scenester hoodie Echo Park Cosby sweater. Lomo sartorial semiotics sustainable, letterpress authentic master cleanse aesthetic banjo tattooed skateboard banh mi hashtag Echo Park stumptown. Kale chips small batch try-hard Schlitz, Portland ennui ugh mixtape Tonx readymade banjo squid pork belly.
 Single-origin coffee tumblr jean shorts fashion axe salvia Carles, narwhal tote bag +1 Odd Future Austin before they sold out. Trust fund Banksy Truffaut, selvage gluten-free meggings umami PBR chambray hashtag. Synth cray biodiesel, mlkshk deep v keffiyeh bicycle rights meh cornhole 8-bit salvia. Mixtape banh mi Etsy DIY, cardigan hoodie actually ethical authentic freegan wolf raw denim yr blue bottle vegan. Marfa narwhal thundercats photo booth occupy, 90's art party Vice. Typewriter pork belly plaid irony organic fanny pack leggings deep v roof party. Twee sriracha Brooklyn tote bag sartorial.
 Hashtag Godard church-key, pork belly cornhole selvage kogi small batch Bushwick. Stumptown narwhal ethnic, Tonx bitters gastropub pitchfork lomo kogi Etsy 8-bit selfies Terry Richardson. Bitters 8-bit Carles, Brooklyn synth McSweeney's Godard helvetica Cosby sweater tousled banh mi next level. Pug Etsy 90's Portland, butcher hoodie cred art party banh mi. Letterpress street art kitsch, gentrify 8-bit quinoa leggings master cleanse next level VHS ugh bicycle rights. Squid street art DIY, intelligentsia butcher hella vegan. Semiotics whatever freegan, banjo pop-up fanny pack typewriter thundercats meh tousled synth hoodie Schlitz.
+Wafer chupa chups candy tart croissant muffin faworki jujubes. Fruitcake brownie gummi bears sweet roll. Icing ice cream jelly. Brownie marshmallow lollipop chocolate cake cotton candy apple pie tart jelly beans. Toffee icing croissant candy canes macaroon. Tiramisu chocolate cake sweet roll marzipan jelly-o sugar plum sweet roll toffee dessert. Oat cake jelly cotton candy faworki apple pie. Chocolate bar chocolate liquorice wafer. Wafer jujubes dessert danish.
 CONTENT
 
 titles = <<-TITLES
@@ -40,6 +55,10 @@ When not to eat bacon -- Never
 Why not Instacode?
 How to use a spoon and fork
 Discover your ears
+Mind the gap
+Tomorrow is not yesterday
+Inside every window
+Find your inner magician
 TITLES
 
 
@@ -55,13 +74,13 @@ tag_seed.each do |t|
     )
 end
 
-8.times do
+15.times do
   post = Post.create(
     title: title_seed.sample.strip,
     author: author_seed.sample.strip,
     content: content_seed.sample.strip
     )
   # post.tags << tag #Tag.all.sample(3)  #add one tag to a post
-  post.tags << Tag.all.sample(2)       #add three random tags to each post
+  post.tags << Tag.all.sample(4)       #add three random tags to each post
   post.save
 end

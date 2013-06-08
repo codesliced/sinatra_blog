@@ -5,7 +5,7 @@
 
       <div class="title"><a href="/single/<%= post.id %>"><%=post.title%></a></div>
       <div class="post"><%=post.content%></div>
-     <span class ="post_ending"> <div class="author">By: <a href="#"><%=post.author.upcase%></a></div>
+     <span class ="post_ending"> <div class="author">By: <a href="/posts/author/<%=post.author%>"><%=post.author.upcase%></a></div>
       <div class="tags">
         <% post.tags.each do |tag| %>
           <a href="/posts/tags/<%=tag.tag_name%>"><span class="tag"><%= tag.tag_name %></span></a>
@@ -16,4 +16,5 @@
       <!-- <tr><td><p>&nbsp;</p></td></tr> -->
         <%end%>
   </div>
+  <footer><p>Copyright 2013</p></footer>
 </div>

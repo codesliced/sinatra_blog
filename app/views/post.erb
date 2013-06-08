@@ -13,18 +13,19 @@
 
 
 
-<div class="modify_buttons">
-  <form action='/destroy/<%=@post.id%>' method='post'>
+<!-- <div class="modify_buttons"> -->
+  <form action='/destroy/<%=@post.id%>' method='post' id='delete'>
   <input class="single_post_delete" type='submit' value='Delete'>
   </form>  
 
-  <form action='/edit/<%=@post.id%>' method='post'>
+  <form action='/edit/<%=@post.id%>' method='get'>
   <input class="single_post_edit" type='submit' value='Edit'>
   </form>  
-</div>
+<!-- </div> -->
   <br>
   <br>
 <!--   <p><a href="/posts/edit">Edit this post</a></p>
  -->  <!-- <p><a href="/">Index Page</p> -->
 </div>
+<footer><p>Copyright 2013</p></footer>
 </div>

@@ -1,5 +1,4 @@
 get '/posts/author/:username' do 
-  @author = Post.find_by_author(params[:username])
-  @posts_by_author = @author.posts
+  @posts_by_author = Post.find_all_by_author(params[:username])
   erb :author
 end
