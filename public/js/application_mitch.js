@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
 
-  $('form').submit(function(e){
+  $('.container').on('submit', '#delete', (function(e){
     e.preventDefault();
     var url = $(this).attr('action'); // for example, '/all'
     var data = $(this).serialize();
