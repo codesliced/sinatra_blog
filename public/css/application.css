@@ -224,6 +224,7 @@ footer {
   font-family: 'Radley', serif;
   height:30px;
   width: 80px;
+  border-radius: 8px;
 }
 
 .post_btn a:link {
@@ -250,22 +251,32 @@ footer {
   height: 30px;
   width: 80px;
   margin-top: 15px;
+  border-radius: 8px;
 }
 
 .modify_buttons {
   display: block;
 }
 
-/*
-input[type=button]:hover {
+#edit {
+  float: right;
+  margin-right: 15px;
+}
+
+#delete {
+  float: right;
+}
+
+input[type=submit]:hover {
   background-color: #53777A;
-}*/
+}
 
 .single_post_created {
   float:right;
   font-size: 12px;
   color: #53777A;
   margin-right:5px;
+  margin-top: 10px;
 }
 
 .single_post_edit {
@@ -277,6 +288,7 @@ input[type=button]:hover {
   height: 30px;
   width: 80px;
   margin-top: 15px;
+  border-radius: 8px;
 }
 
 .blog_form {

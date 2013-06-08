@@ -8,7 +8,7 @@
      <span class ="post_ending"> <div class="author">By: <a href="#"><%=post.author.upcase%></a></div>
       <div class="tags">
         <% post.tags.each do |tag| %>
-          <a href="#"><span class="tag"><%= tag.tag_name %></span></a>
+          <a href="/posts/tags/<%=tag.tag_name%>"><span class="tag"><%= tag.tag_name %></span></a>
         <% end %>
       </div></span>
       <div class="date"><%= post.created_at.strftime("%b %d, %Y") %></div>

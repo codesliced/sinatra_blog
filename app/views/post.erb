@@ -6,26 +6,24 @@
   <div class="single_post_author">User: <%=@post.author.upcase%></div>
   <p> <div class="tags_single">
         <% @post.tags.each do |tag| %>
-          <a href="#"><span class="tag"><%= tag.tag_name %></span></a>
+          <a href="/posts/tags/<%=tag.tag_name%>"><span class="tag"><%= tag.tag_name %></span></a>
         <% end %>
       </div>
 
 
 
 
-<!-- <div class="modify_buttons"> -->
+<div class="modify_buttons">
   <form action='/destroy/<%=@post.id%>' method='post' id='delete'>
   <input class="single_post_delete" type='submit' value='Delete'>
   </form>  
 
-  <form action='/edit/<%=@post.id%>' method='get'>
+  <form action='/edit/<%=@post.id%>' method='get' id='edit'>
   <input class="single_post_edit" type='submit' value='Edit'>
   </form>  
-<!-- </div> -->
+</div>
   <br>
   <br>
-<!--   <p><a href="/posts/edit">Edit this post</a></p>
- -->  <!-- <p><a href="/">Index Page</p> -->
 </div>
 <footer><p>Copyright 2013</p></footer>
 </div>
