@@ -1,5 +1,5 @@
 get '/posts' do
-  erb :list_of_posts
+  erb :create_posts
 end
 
 post '/all' do
@@ -21,3 +21,7 @@ post '/destroy/:id' do
 end
 
 
+post '/edit/:id' do
+  @post = Post.find(params[:id])
+  @post.update_attributes(params[:post])
+end

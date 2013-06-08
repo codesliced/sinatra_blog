@@ -82,6 +82,7 @@ h1 {
   font-family: 'Radley', serif;
   /*font-family: 'Shadows Into Light Two', cursive;*/
   font-size: 30px;
+  line-height: 36px;
   color: #D95B43;
   margin-bottom: 8px;
 }
@@ -91,7 +92,7 @@ h1 {
 }
 
 .title a:hover {
-  color: #D95B43;
+  color: #53777A;
 }
 
 .date {
@@ -235,20 +236,29 @@ footer {
 
 .single_post_author {
   float:right;
-  font-size: 14px;
+  font-size: 12px;
   color: #53777A;
   margin-right: 5px;
 }
 
 .single_post_delete {
-  margin-top: 40px;
-  border:10px solid #D95B43;
+  background-color: #D95B43;
   font-size: 14px;
   color: #ECE5CE;
+  border: 0;
   font-family: 'Radley', serif;
-  height:30px;
-  width: 60px;
+  height: 30px;
+  width: 80px;
+  margin-top: 15px;
+}
 
+.modify_buttons {
+  display: block;
+}
+
+
+input[type=button]:hover {
+  background-color: #53777A;
 }
 
 .single_post_created {
@@ -259,7 +269,14 @@ footer {
 }
 
 .single_post_edit {
-
+  background-color: #D95B43;
+  font-size: 14px;
+  color: #ECE5CE;
+  border: 0;
+  font-family: 'Radley', serif;
+  height: 30px;
+  width: 80px;
+  margin-top: 15px;
 }
 
 

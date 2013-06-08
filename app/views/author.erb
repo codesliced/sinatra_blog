@@ -1,14 +1,14 @@
 <div class="container">
    <div class="headline"><a href="#">All Posts</a> | <a href="/posts">Create</a></div>
    <div class="blogposts">
-    <% @posts.each do |post| %>
+    <% @posts_by_author.each do |post| %>
 
       <div class="title"><a href="/single/<%= post.id %>"><%=post.title%></a></div>
       <div class="post"><%=post.content%></div>
      <span class ="post_ending"> <div class="author">By: <a href="#"><%=post.author.upcase%></a></div>
       <div class="tags">
         <% post.tags.each do |tag| %>
-          <a href="/posts/tags/<%=tag.tag_name%>"><span class="tag"><%= tag.tag_name %></span></a>
+          <a href="#"><span class="tag"><%= tag.tag_name %></span></a>
         <% end %>
       </div></span>
       <div class="date"><%= post.created_at.strftime("%b %d, %Y") %></div>
